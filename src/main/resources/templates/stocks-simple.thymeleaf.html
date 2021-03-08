@@ -1,0 +1,14 @@
+<tbody>
+<tr th:each="item: ${items}"
+th:class="${itemStat.odd}? 'even' : 'odd'">
+<td th:utext="${itemStat.count}"></td>
+<td><a th:href="${'/stocks/' + item.symbol}"
+th:utext="${item.symbol}"></a></td>
+<td><a th:href="${item.url}" th:utext="${item.name}"></a></td>
+<td><strong th:utext="${item.price}"></strong></td>
+<td th:utext="${item.change}"
+th:class="${item.change lt 0} ? 'minus'"></td>
+<td th:utext="${item.ratio}"
+th:class="${item.change lt 0} ? 'minus'"></td>
+</tr>
+</tbody>

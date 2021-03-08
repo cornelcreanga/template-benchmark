@@ -1,0 +1,12 @@
+<tbody>
+{{#items}}
+<tr class="{{rowClass}}">
+<td>{{index}}</td>
+<td><a href="/stocks/{{value.symbol}}">{{value.symbol}}</a></td>
+<td><a href="{{value.url}}">{{value.name}}</a></td>
+<td><strong>{{value.price}}</strong></td>
+<td{{negativeClass}}>{{value.change}}</td>
+<td{{negativeClass}}>{{value.ratio}}</td>
+</tr>
+{{/items}}
+</tbody>

@@ -23,7 +23,7 @@ public class Freemarker extends BaseBenchmark {
     public void setup() throws IOException {
         Configuration configuration = new Configuration(Configuration.VERSION_2_3_22);
         configuration.setTemplateLoader(new ClassTemplateLoader(getClass(), "/"));
-        template = configuration.getTemplate("templates/stocks.freemarker.html");
+        template = configuration.getTemplate("templates/stocks-simple.freemarker.html");
         this.context = getContext();
     }
 

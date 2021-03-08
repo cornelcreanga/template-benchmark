@@ -27,7 +27,7 @@ public class Rocker extends BaseBenchmark {
 
     @Benchmark
     public String benchmark() throws TemplateException, IOException {
-        return templates.stocks
+        return templates.stocksSimple
                 .template(this.items)
                 .render()
                 .toString();

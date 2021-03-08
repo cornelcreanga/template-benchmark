@@ -34,7 +34,7 @@ public class Mustache extends BaseBenchmark {
                 }
             }
         };
-        template = mustacheFactory.compile("templates/stocks.mustache.html");
+        template = mustacheFactory.compile("templates/stocks-simple.mustache.html");
     }
 
     @SuppressWarnings("unchecked")

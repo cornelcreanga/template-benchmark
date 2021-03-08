@@ -1,0 +1,12 @@
+<tbody>
+{{#each items base=1}}
+<tr class="{{&@odd}}{{&@even}}">
+<td>{{&@index}}</td>
+<td><a href="/stocks/{{&symbol}}">{{&symbol}}</a></td>
+<td><a href="{{&url}}">{{&name}}</a></td>
+<td><strong>{{&price}}</strong></td>
+<td {{minus}}>{{&change}}</td>
+<td {{minus}}>{{&ratio}}</td>
+</tr>
+{{/each}}
+</tbody>

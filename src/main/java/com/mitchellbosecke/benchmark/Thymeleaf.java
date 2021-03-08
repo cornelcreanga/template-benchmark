@@ -30,7 +30,7 @@ public class Thymeleaf extends BaseBenchmark {
     @Benchmark
     public String benchmark() throws TemplateException, IOException {
         Writer writer = new StringWriter();
-        engine.process("templates/stocks.thymeleaf.html", context, writer);
+        engine.process("templates/stocks-simple.thymeleaf.html", context, writer);
         return writer.toString();
     }
 

@@ -21,13 +21,8 @@ public class Handlebars extends BaseBenchmark {
   @Setup
   public void setup() throws IOException {
     template = new com.github.jknack.handlebars.Handlebars(new ClassPathTemplateLoader("/", ".html"))
-            .registerHelper("minus", new Helper<Stock>() {
-              @Override
-              public CharSequence apply(final Stock stock, final Options options)
-                  throws IOException {
-                return stock.getChange() < 0 ? new SafeString("class=\"minus\"") : null;
-              }
-            }).compile("templates/stocks.hbs");
+            .registerHelper("minus", (Helper<Stock>) (stock, options) -> stock.getChange() < 0 ? new SafeString("class=\"minus\"") : null)
+            .compile("templates/stocks-simple.hbs");
     this.context = getContext();
   }
 

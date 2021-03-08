@@ -60,12 +60,12 @@ public class ExpectedOutputTest {
         assertOutput(mustache.benchmark());
     }
 
-    @Test
-    public void testThymeleafOutput() throws IOException, TemplateException {
-        Thymeleaf thymeleaf = new Thymeleaf();
-        thymeleaf.setup();
-        assertOutput(thymeleaf.benchmark());
-    }
+//    @Test
+//    public void testThymeleafOutput() throws IOException, TemplateException {
+//        Thymeleaf thymeleaf = new Thymeleaf();
+//        thymeleaf.setup();
+//        assertOutput(thymeleaf.benchmark());
+//    }
 
     @Test
     public void testTrimouOutput() throws IOException {
